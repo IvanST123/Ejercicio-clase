@@ -2,7 +2,7 @@ import react from 'react'
 
 export default function Greetings(props) {
     const {groupInfo, funcion} = props 
-    const { grupo, day } = groupInfo 
+    const { grupo= 'Invitado', day } = groupInfo 
  console.log(props)
  console.log(groupInfo)
  console.log(grupo)
@@ -10,7 +10,7 @@ export default function Greetings(props) {
     
     return(
         <div>
-            <button onClick={() => funcion(grupo)}>Greetings</button>
+            <button onClick={() => funcion(day, grupo)}>Greetings</button>
 
             </div>
     )
